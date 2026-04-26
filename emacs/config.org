@@ -1,0 +1,177 @@
+#+TITLE: Emacs Config
+#+AUTHOR: Your Name
+#+DESCRIPTION: Personal Emacs config.
+
+* IMPORTANT PROGRAMS TO LOAD FIRST
+To keep this =config.org= a reasonable length, I have moved a lot of code to individual scripts that will be sourced by this config.  These scripts are found in "~/.config/emacs/scripts" and do not contain any code that most people are likely to need to edit.
+
+** Adding the scripts directory to path
+#+begin_src emacs-lisp
+(add-to-list 'load-path "~/.config/emacs/scripts/")
+#+end_src
+
+** Sourcing the scripts
+#+begin_src emacs-lisp
+(require 'elpaca-setup)  ;; The Elpaca Package Manager
+(require 'app-launchers) ;; Use emacs as a run launcher like dmenu (experimental)
+#+end_src
+
+* DASHBOARD
+Emacs Dashboard is an extensible startup screen showing you recent files, bookmarks, agenda items and an Emacs banner.
+
+#+begin_src emacs-lisp
+(use-package dashboard
+  :ensure t 
+  :init
+  (setq initial-buffer-choice 'dashboard-open)
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  (setq dashboard-banner-logo-title "Emacs Is More Than A Text Editor!")
+  ;;(setq dashboard-startup-banner 'logo) ;; use standard emacs logo as banner
+  (setq dashboard-startup-banner "~/.config/emacs/images/emacs-dash.png")  ;; use custom image as banner
+  (setq dashboard-center-content nil) ;; set to 't' for centered content
+  (setq dashboard-items '((recents . 5)
+                          (agenda . 5 )
+                          (bookmarks . 3)
+                          (projects . 3)))
+  :custom 
+  (dashboard-modify-heading-icons '((recents . "file-text")
+				      (bookmarks . "book")))
+  :config
+  (dashboard-setup-startup-hook))
+
+#+end_src
+
+* FONTS
+Defining the various fonts that Emacs will use.
+
+** Setting the Font Face
+#+begin_src emacs-lisp
+(set-face-attribute 'default nil
+  :font "JetBrainsMono Nerd Font"
+  :weight 'medium)
+(set-face-attribute 'variable-pitch nil
+  :font "JetBrainsMono Nerd Font"
+  :weight 'medium)
+(set-face-attribute 'fixed-pitch nil
+  :font "JetBrainsMono Nerd Font"
+  :weight 'medium)
+;; Makes commented text and keywords italics.
+;; This is working in emacsclient but not emacs.
+;; Your font must have an italic face available.
+(set-face-attribute 'font-lock-comment-face nil
+  :slant 'italic)
+(set-face-attribute 'font-lock-keyword-face nil
+  :slant 'italic)
+
+;; This sets the default font on all graphical frames created after restarting Emacs.
+;; Does the same thing as 'set-face-attribute default' above, but emacsclient fonts
+;; are not right unless I also add this method of setting the default font.
+(add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
+
+;; Uncomment the following line if line spacing needs adjusting.
+(setq-default line-spacing 0.12)
+(set-face-background 'mouse "#ffffff")
+
+#+end_src
+
+* SANE DEFAULTS
+The following settings are simple modes that are enabled (or disabled) so that Emacs functions more like you would expect a proper editor/IDE to function.
+
+#+begin_src emacs-lisp
+(delete-selection-mode 1)    ;; You can select text and delete it by typing.
+(electric-indent-mode -1)    ;; Turn off the weird indenting that Emacs does by default.
+(electric-pair-mode 1)       ;; Turns on automatic parens pairing
+;; The following prevents <> from auto-pairing when electric-pair-mode is on.
+;; Otherwise, org-tempo is broken when you try to <s TAB...
+(add-hook 'org-mode-hook (lambda ()
+           (setq-local electric-pair-inhibit-predicate
+                   `(lambda (c)
+                  (if (char-equal c ?<) t (,electric-pair-inhibit-predicate c))))))
+(global-auto-revert-mode t)  ;; Automatically show changes if the file has changed
+(global-display-line-numbers-mode 1) ;; Display line numbers
+(global-visual-line-mode t)  ;; Enable truncated lines
+(menu-bar-mode -1)           ;; Disable the menu bar 
+(scroll-bar-mode -1)         ;; Disable the scroll bar
+(tool-bar-mode -1)           ;; Disable the tool bar
+(setq display-line-numbers 'relative) ;; Display relative line numbers
+(setq org-edit-src-content-indentation 0) ;; Set src block automatic indent to 0 instead of 2.
+(setq use-file-dialog nil)   ;; No file dialog
+(setq use-dialog-box nil)    ;; No dialog box
+(setq pop-up-windows nil)    ;; No popup windows
+#+end_src
+
+** GREEN OUTLINE
+Green outline to highlight the line the cursor is on.
+
+#+begin_src emacs-lisp
+(global-hl-line-mode 1)
+#+end_src
+
+** Zooming In/Out
+You can use the bindings CTRL plus =/- for zooming in/out.  You can also use CTRL plus the 
+mouse wheel for zooming in/out.
+
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-=") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
+(global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
+#+end_src
+
+* ORG MODE
+#+begin_src emacs-lisp
+(setq org-directory "~/Org/")
+#+end_src
+
+** Agenda
+#+begin_src emacs-lisp
+(setq org-agenda-files '("~/Org/TODO.org"))
+#+end_src
+
+** Preserve Indentation On Org-Babel-Tangle
+#+begin_src emacs-lisp
+(setq org-src-preserve-indentation t)
+
+#+end_src
+
+* SHELLS AND TERMINALS
+In my configs, all of my shells (bash, fish, zsh and the ESHELL) require my shell-color-scripts-git package to be installed.  On Arch Linux, you can install it from the AUR.  Otherwise, go to my shell-color-scripts repository on GitLab to get it.
+
+** Eshell
+Eshell is an Emacs 'shell' that is written in Elisp.
+
+#+begin_src emacs-lisp
+
+;; Disabling company mode in eshell, because it's annoying.
+(setq company-global-modes '(not eshell-mode))
+
+;; Adding a keybinding for 'pcomplete-list' on F9 key.
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (define-key eshell-mode-map (kbd "<f9>") #'pcomplete-list)))
+
+;; A function for easily creating multiple buffers of 'eshell'.
+;; NOTE: `C-u M-x eshell` would also create new 'eshell' buffers.
+(defun eshell-new (name)
+  "Create new eshell buffer named NAME."
+  (interactive "sName: ")
+  (setq name (concat "$" name))
+  (eshell)
+  (rename-buffer name))
+#+end_src
+
+* MINIBUFFER ESCAPE
+By default, Emacs requires you to hit ESC three times to escape quit the minibuffer.  
+
+#+begin_src emacs-lisp
+(global-set-key [escape] 'keyboard-escape-quit)
+#+end_src
+
+* BACKUP 
+By default, Emacs creates automatic backups of files in their original directories, such "file.el" and the backup "file.el~".  This leads to a lot of clutter, so let's tell Emacs to put all backups that it creates in the =TRASH= directory.
+
+#+begin_src emacs-lisp
+(setq backup-directory-alist '((".*" . "~/.local/share/Trash/files")))
+
+#+end_src
