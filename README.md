@@ -16,7 +16,7 @@
 
 ![Web Apps](Screenshot6.png)
 
-## Termbin
+## INSTALLED APPS ON FEDORA
 
 [Installed](Installed.txt)
 
