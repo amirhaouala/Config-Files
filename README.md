@@ -25,7 +25,6 @@
 
 - copr.fedorainfracloud.org/errornointernet/packages
 - copr.fedorainfracloud.org/kylegospo/webapp-manager
-- copr.fedorainfracloud.org/phracek/PyCharm (disabled)
 - copr.fedorainfracloud.org/solopasha/hyprlandqemu
 
 ## VSCODIUM SETUP
