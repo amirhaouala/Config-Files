@@ -19,6 +19,7 @@
 ## INSTALLED APPS ON FEDORA
 
 [Installed](Installed.txt)
+[Flatpak](flatpak.txt)
 
 ## DNF COPR LIST
 
@@ -36,3 +37,4 @@
 - Distrobox: Arch
 - Podman: Parrot, Kali
 - Boxes(libvirt): Nixos
+- Dual Boot For Gaming ONLY: Win

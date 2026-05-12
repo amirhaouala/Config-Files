@@ -1,0 +1,30 @@
+MarkText	com.github.marktext.marktext	0.17.1	stable	system
+Flatseal	com.github.tchx84.Flatseal	2.4.0	stable	system
+Extension Manager	com.mattjakeman.ExtensionManager	0.6.5	stable	system
+RustDesk	com.rustdesk.RustDesk	1.4.5	stable	system
+Add Water	dev.qwery.AddWater	1.2.7	stable	system
+Beekeeper Studio	io.beekeeperstudio.Studio	5.5.5	stable	system
+Warehouse	io.github.flattool.Warehouse	2.2.0	stable	system
+Mission Center	io.missioncenter.MissionCenter	1.1.0	stable	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-23.08.34	23.08	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-24.08.29	24.08	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-25.08.7	25.08	system
+Mesa	org.freedesktop.Platform.GL.default	25.0.7	23.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.0.7	23.08-extra	system
+Mesa	org.freedesktop.Platform.GL.default	25.3.3	24.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.3.3	24.08extra	system
+Mesa	org.freedesktop.Platform.GL.default	25.3.3	25.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	25.3.3	25.08-extra	system
+Intel VAAPI driver	org.freedesktop.Platform.VAAPI.Intel		23.08	system
+Intel VAAPI driver	org.freedesktop.Platform.VAAPI.Intel		24.08	system
+Intel VAAPI driver	org.freedesktop.Platform.VAAPI.Intel		25.08	system
+Codecs Extra Extension	org.freedesktop.Platform.codecs-extra		25.08-extra	system
+FFmpeg extension with extra codecs	org.freedesktop.Platform.ffmpeg-full		24.08	system
+openh264	org.freedesktop.Platform.openh264	2.5.1	2.5.1	system
+Freedesktop SDK	org.freedesktop.Sdk	freedesktop-sdk-24.08.29	24.08	system
+FireDragon	org.garudalinux.firedragon	v12.7.0	stable	system
+GNOME Application Platform version 49	org.gnome.Platform		49	system
+Meld	org.gnome.meld	3.22.3	stable	system
+Adwaita dark GTK theme	org.gtk.Gtk3theme.Adwaita-dark		3.22	system
+Flat-Remix-GTK-Blue-Dark	org.gtk.Gtk3theme.Flat-Remix-GTK-Blue-Dark		3.22	system
+Firefox	org.mozilla.firefox	147.0.2	stable	system
