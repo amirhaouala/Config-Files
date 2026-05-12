@@ -8,6 +8,10 @@
 ![Ags](Screenshot4.png)
 ![Settings](Screenshot5.png)
 
+## Waybar Prayer Script to build
+
+- [PRAYERBAR](https://github.com/Onizuka893/prayerbar)
+
 ## Web Apps
 
 ![Web Apps](Screenshot6.png)
