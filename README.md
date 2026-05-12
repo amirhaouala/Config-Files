@@ -7,3 +7,18 @@
 ![Scratchpad Desktop](Screenshot3.png)
 ![Ags](Screenshot4.png)
 ![Settings](Screenshot5.png)
+
+## Web Apps
+
+![Web Apps](Screenshot6.png)
+
+## Termbin
+
+[Installed](Installed.txt)
+
+## dnf copr list
+
+- copr.fedorainfracloud.org/errornointernet/packages
+- copr.fedorainfracloud.org/kylegospo/webapp-manager
+- copr.fedorainfracloud.org/phracek/PyCharm (disabled)
+- copr.fedorainfracloud.org/solopasha/hyprland
