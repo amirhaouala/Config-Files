@@ -137,7 +137,8 @@
   :ensure t
   :config
   (setq elfeed-feeds
-        '("https://news.ycombinator.com/rss"))
+        '("https://news.ycombinator.com/rss"
+	  "https://inv.nadeko.net/feed/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"))
   (setq elfeed-db-directory "~/.elfeed")
   (global-set-key (kbd "C-x w") 'elfeed))
 #+end_src
