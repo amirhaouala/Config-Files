@@ -1,6 +1,6 @@
-# Configuration Files
+# CONFIGURATION FILES
 
-## Screenshots
+## SCREENSHOTS
 
 ![General](Screenshot1.png)
 ![Rofi](Screenshot2.png)
@@ -8,11 +8,11 @@
 ![Ags](Screenshot4.png)
 ![Settings](Screenshot5.png)
 
-## Waybar Prayer Script to build
+## WAYBAR PRAYER SCRIPT TO BUILD
 
 - [PRAYERBAR](https://github.com/Onizuka893/prayerbar)
 
-## Web Apps
+## WEB APPS
 
 ![Web Apps](Screenshot6.png)
 
@@ -20,18 +20,18 @@
 
 [Installed](Installed.txt)
 
-## dnf copr list
+## DNF COPR LIST
 
 - copr.fedorainfracloud.org/errornointernet/packages
 - copr.fedorainfracloud.org/kylegospo/webapp-manager
 - copr.fedorainfracloud.org/phracek/PyCharm (disabled)
 - copr.fedorainfracloud.org/solopasha/hyprlandqemu
 
-## Vscodiun Setup
+## VSCODIUM SETUP
 
 [VSCodium](VSCodium)
 
-## Other OSES
+## OTHER OSES
 
 - Distrobox: Arch
 - Podman: Parrot, Kali
