@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 # /* Calculator (using qalculate) and rofi */
-# /* Submitted by: https://github.com/JosephArmas */
 
 rofi_theme="$HOME/.config/rofi/config-calc.rasi"
 

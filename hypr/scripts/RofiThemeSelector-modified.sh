@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # A modified version of Rofi-Theme-Selector, concentrating only on ~/.local and also, applying only 10 @themes in ~/.config/rofi/config.rasi
 # as opposed to continous adding of //@theme
 
@@ -53,7 +52,7 @@ declare -a theme_names
 # Find themes in defined directories
 find_themes() {
     directories=("$HOME/.local/share/rofi/themes" "$HOME/.config/rofi/themes")
-    
+
     for TD in "${directories[@]}"; do
         if [ -d "$TD" ]; then
             echo "Checking themes in: $TD"
@@ -186,31 +185,21 @@ Please update your config file if you have local modifications.</span>"""
     done
 }
 
-############################################################################################################
-# Actual program execution
-###########################################################################################################
-##
+# Main execution
 # Find all themes
-##
 find_themes
 
-##
-# Do check if there are themes.
-##
+# Check if themes exist
 if [ ${#themes[@]} = 0 ]
 then
     ${ROFI} -e "No themes found."
     exit 0
 fi
 
-##
-# Create copy of config to play with in preview
-##
+# Create copy of config for preview
 create_config_copy
 
-##
-# Show the themes to user.
-##
+# Show themes to user
 if select_theme && [ -n "${SELECTED}" ]
 then
     # Apply the selected theme
@@ -219,11 +208,9 @@ then
     # Send notification with the selected theme name
     selection="${theme_names[${SELECTED}]}"
     if [ -n "$NOTIFY_SEND" ]; then
-        notify-send -u low -i "$iDIR/ja.png"  "Rofi Theme applied:" "$selection"
+        notify-send -u low "Rofi Theme applied:" "$selection"
     fi
 fi
 
-##
-# Remove temp. config.
-##
+# Remove temp config
 rm -- "${TMP_CONFIG_FILE}"

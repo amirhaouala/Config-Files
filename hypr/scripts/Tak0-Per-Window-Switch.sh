@@ -1,15 +1,10 @@
-##################################################################
-#                  TAK_0'S Per-Window-Switch                     #
-#                                                                #
-#  Just a little script that I made to switch keyboard layouts   #
-#       per-window instead of global switching for the more      #
-#                 smooth and comfortable workflow.               #
-##################################################################
+#!/usr/bin/env bash
+# Per-window keyboard layout switcher
 # This is for changing kb_layouts. Set kb_layouts in
 
 MAP_FILE="$HOME/.cache/kb_layout_per_window"
 CFG_FILE="$HOME/.config/hypr/configs/SystemSettings.conf"
-ICON="$HOME/.config/swaync/images/ja.png"
+ICON="$HOME/.config/swaync/images/note.png"
 SCRIPT_NAME="$(basename "$0")"
 LISTENER_PIDFILE="$HOME/.cache/kb_layout_per_window.listener.pid"
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # run_repo_update
 # Arguments:
 #   $1 - expected repository root (typically SCRIPT_DIR from copy.sh)

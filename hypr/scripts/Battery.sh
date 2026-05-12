@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Battery
 
 for i in {0..3}; do
   if [ -f /sys/class/power_supply/BAT$i/capacity ]; then

@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-
 # show_copy_menu
 # Arguments:
 #   $1 - express_supported flag (1 if available, 0 otherwise)
 # Sets global COPY_MENU_CHOICE to one of: install, upgrade, express, quit
 show_copy_menu() {
   local express_supported="${1:-0}"
-  local menu_title="      KooL's Hyprland Dotfiles      "
+  local menu_title="      Hyprland Dotfiles      "
   local prompt="Select what you would like to do:"
 
   local install_tag="Install"

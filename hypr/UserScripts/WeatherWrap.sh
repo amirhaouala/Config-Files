@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Weather entrypoint: prefer Python (Open‑Meteo), fallback to legacy Bash (wttr.in)
 
 SCRIPT_DIR="$(dirname "$0")"
@@ -12,15 +11,15 @@ check_network() {
     if ping -c1 -W2 8.8.8.8 >/dev/null 2>&1; then
         return 0
     fi
-    
+
     if ping -c1 -W2 1.1.1.1 >/dev/null 2>&1; then
         return 0
     fi
-    
+
     if curl -s --connect-timeout 3 "https://ipinfo.io" >/dev/null 2>&1; then
         return 0
     fi
-    
+
     return 1
 }
 

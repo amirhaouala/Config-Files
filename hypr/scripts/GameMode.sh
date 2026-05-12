@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Game Mode. Turning off all animations
 
-notif="$HOME/.config/swaync/images/ja.png"
+notif="$HOME/.config/swaync/images/note.png"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
 
 
@@ -16,9 +15,9 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-	
+
 	hyprctl keyword "windowrule opacity 1 override 1 override 1 override, ^(.*)$"
-    swww kill 
+    swww kill
     notify-send -e -u low -i "$notif" " Gamemode:" " enabled"
     sleep 0.1
     exit
@@ -28,7 +27,7 @@ else
 	${SCRIPTSDIR}/WallustSwww.sh
 	sleep 0.5
   hyprctl reload
-	${SCRIPTSDIR}/RefreshNoWaybar.sh	 
+	${SCRIPTSDIR}/RefreshNoWaybar.sh
     notify-send -e -u normal -i "$notif" " Gamemode:" " disabled"
     exit
 fi

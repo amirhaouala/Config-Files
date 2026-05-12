@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 # Kitty Themes Source https://github.com/dexpota/kitty-themes #
 
 # Define directories and variables
@@ -142,7 +141,7 @@ while true; do
     break
   elif [ $rofi_exit_code -eq 10 ]; then # This is the exit code for -kb-custom-1
     apply_kitty_theme_to_config "$theme_to_preview_now" "apply"
-    notify_user "$iDIR/ja.png" "Kitty Theme Applied" "$theme_to_preview_now"
+    notify_user "$iDIR/note.png" "Kitty Theme Applied" "$theme_to_preview_now"
     break
   else
     notify_user "$iDIR/error.png" "Rofi Error" "Unexpected Rofi exit ($rofi_exit_code). Reverting."

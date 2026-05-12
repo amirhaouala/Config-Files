@@ -134,7 +134,7 @@ prompt_clock_12h() {
   local log="$1"
   local base="${DOTFILES_DIR:-.}"
   while true; do
-    echo -e "${NOTE} ${SKY_BLUE} By default, KooL's Dots are configured in 24H clock format."
+    echo -e "${NOTE} ${SKY_BLUE} By default, dots are configured in 24H clock format."
     echo -n "$CAT Do you want to change to 12H (AM/PM) clock format? (y/n): "
     read answer
     answer=$(echo "$answer" | tr '[:upper:]' '[:lower:]')

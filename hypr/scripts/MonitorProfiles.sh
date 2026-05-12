@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # For applying Pre-configured Monitor Profiles
 
 # Check if rofi is already running
@@ -34,8 +33,8 @@ chosen_file=$(echo "$mon_profiles_list" | rofi -i -dmenu -config $rofi_theme -me
 if [[ -n "$chosen_file" ]]; then
     full_path="$monitor_dir/$chosen_file.conf"
     cp "$full_path" "$target"
-    
-    notify-send -u low -i "$iDIR/ja.png" "$chosen_file" "Monitor Profile Loaded"
+
+    notify-send -u low -i "$iDIR/note.png" "$chosen_file" "Monitor Profile Loaded"
 fi
 
 sleep 1

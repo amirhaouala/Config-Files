@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # source https://wiki.archlinux.org/title/Hyprland#Using_a_script_to_change_wallpaper_every_X_minutes
 
 # This script will randomly go through the files of a directory, setting it
@@ -31,13 +30,13 @@ while true; do
 		done \
 		| sort -n | cut -d':' -f2- \
 		| while read -r img; do
-			swww img -o $focused_monitor "$img" 
+			swww img -o $focused_monitor "$img"
 			# Regenerate colors from the exact image path to avoid cache races
 			$HOME/.config/hypr/scripts/WallustSwww.sh "$img"
 			# Refresh UI components that depend on wallust output
 			$wallust_refresh
 			$HOME/.config/hypr/UserScripts/RainbowBorders.sh
 			sleep $INTERVAL
-			
+
 		done
 done

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 # Rewritten to use Open-Meteo APIs (worldwide, no API key) for robust weather data.
 # Outputs Waybar-compatible JSON and a simple text cache.
 
@@ -39,7 +38,7 @@ class WeatherData:
     is_day: int
     code: int
 
-# =============== Configuration ===============
+# Configuration
 # You can configure behavior via environment variables OR the constants below.
 # Examples (zsh):
 #   # One-off run
@@ -89,7 +88,7 @@ TIMEOUT = 8
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": UA})
 
-# =============== Icon and status mapping ===============
+# Icon and status mapping
 # Reuse prior icon set for continuity
 WEATHER_ICONS = {
     "sunnyDay": "󰖙",
@@ -155,7 +154,7 @@ def wmo_to_status(code: int) -> str:
     return WMO_STATUS.get(code, "Unknown")
 
 
-# =============== Utilities ===============
+# Utilities
 
 def esc(s: Optional[str]) -> str:
     return html.escape(s, quote=False) if s else ""
@@ -424,7 +423,7 @@ def format_visibility(meters: Optional[float]) -> str:
         return ""
 
 
-# =============== API Fetching ===============
+# API fetching
 
 def fetch_open_meteo(lat: float, lon: float) -> Dict[str, Any]:
     base = "https://api.open-meteo.com/v1/forecast"
@@ -548,7 +547,7 @@ def fetch_place(lat: float, lon: float) -> Optional[str]:
     return reverse_geocode_open_meteo(lat, lon, lang)
 
 
-# =============== Build Output ===============
+# Build output
 
 _T = TypeVar("_T")
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Smooth border cycling effect using Wallust palette or full rainbow
 
 # Possible values: "wallust_random", "rainbow", "gradient_flow"
@@ -9,7 +8,7 @@ WALLUST_COLORS_SOURCE="$HOME/.config/hypr/wallust/wallust-hyprland.conf"
 
 WALLUST_COLORS=()
 
-# ---------- LOAD WALLUST COLORS ----------
+# Load wallust colors
 if [[ "$EFFECT_TYPE" == "wallust_random" || "$EFFECT_TYPE" == "gradient_flow" ]]; then
     # Accept either hex (0xffRRGGBB) or rgb(r,g,b) and normalize to 0xffRRGGBB
     mapfile -t WALLUST_COLORS < <(
@@ -31,17 +30,17 @@ if [[ "$EFFECT_TYPE" == "wallust_random" || "$EFFECT_TYPE" == "gradient_flow" ]]
     fi
 fi
 
-# ---------- RANDOM WALLUST COLORS ----------
+# Random wallust colors
 function wallust_random() {
     echo "${WALLUST_COLORS[RANDOM % ${#WALLUST_COLORS[@]}]}"
 }
 
-# ---------- RAINBOW COLORS ----------
+# Rainbow colors
 function random_hex() {
     echo "0xff$(openssl rand -hex 3)"
 }
 
-# ---------- FLOW MODE ----------
+# Flow mode
 BASE_COLOR="${WALLUST_COLORS[10]}"
 GRAD1_COLOR="${WALLUST_COLORS[14]}"
 GRAD2_COLOR="${WALLUST_COLORS[13]}"
@@ -70,7 +69,7 @@ function gradient_flow_color() {
     fi
 }
 
-# ---------- Main function ---------- 
+# Main function
 
 function get_color() {
     if [[ "$EFFECT_TYPE" == "wallust_random" && ${#WALLUST_COLORS[@]} -gt 0 ]]; then

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 # A bash script designed to run only once dotfiles installed
 
 # THIS SCRIPT CAN BE DELETED ONCE SUCCESSFULLY BOOTED!! And also, edit ~/.config/hypr/configs/Settings.conf
@@ -25,11 +24,11 @@ if [ ! -f "$HOME/.config/hypr/.initial_startup_done" ]; then
     sleep 1
     # Initialize wallust and wallpaper
 	if [ -f "$wallpaper" ]; then
-		wallust run -s $wallpaper > /dev/null 
+		wallust run -s $wallpaper > /dev/null
 		swww query || swww-daemon && $swww $wallpaper $effect
-	    "$scriptsDir/WallustSwww.sh" > /dev/null 2>&1 & 
+	    "$scriptsDir/WallustSwww.sh" > /dev/null 2>&1 &
 	fi
-     
+
     # initiate GTK dark mode and apply icon and cursor theme
     gsettings set org.gnome.desktop.interface color-scheme $color_scheme > /dev/null 2>&1 &
     gsettings set org.gnome.desktop.interface gtk-theme $gtk_theme > /dev/null 2>&1 &
@@ -45,14 +44,14 @@ if [ ! -f "$HOME/.config/hypr/.initial_startup_done" ]; then
       dconf write /org/gnome/desktop/interface/cursor-theme "'$cursor_theme'" > /dev/null 2>&1 &
       dconf write /org/gnome/desktop/interface/cursor-size "24" > /dev/null 2>&1 &
 	fi
-       
+
     # initiate kvantum theme
     kvantummanager --set "$kvantum_theme" > /dev/null 2>&1 &
 
 	# waybar style
 	#if [ -L "$HOME/.config/waybar/config" ]; then
     ##    	ln -sf "$waybar_style" "$HOME/.config/waybar/style.css"
-    #   	"$scriptsDir/RefreshNoWaybar.sh" > /dev/null 2>&1 & 
+    #   	"$scriptsDir/RefreshNoWaybar.sh" > /dev/null 2>&1 &
 	#fi
 
 

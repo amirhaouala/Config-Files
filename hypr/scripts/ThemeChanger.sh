@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
+# ThemeChanger
+
 set -euo pipefail
 
-# SPDX-FileCopyrightText: 2025-present Ahum Maitra theahummaitra@gmail.com
-#
-# SPDX-License-Identifier: 	GPL-3.0-or-later
-
-# Repository url : https://github.com/TheAhumMaitra/cautious-waddle
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 require() {
   command -v "$1" >/dev/null 2>&1 || {
