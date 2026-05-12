@@ -37,3 +37,7 @@
 - Podman: Parrot, Kali
 - Boxes(libvirt): Nixos
 - Dual Boot For Gaming ONLY: Win
+
+## Waydroid Apps
+
+![Waydroid](Waydroid.png)
