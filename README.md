@@ -1,5 +1,25 @@
 # CONFIGURATION FILES
 
+## WHAT'S INCLUDED
+
+- Installed application including flatpak (I'll exclude fedora installed apps)
+- Screenshots
+- Ags configuration
+- Emacs configuration
+- Fastfetch configuration
+- Fish configuration
+- HYPR Configuration (Special thanks to JaKooLit)
+- Kitty configuration
+- Lazydocker configuration
+- Rofi configuration
+- Swaync configuration
+- VSCodium configuration
+- Waybar configuration
+- Wlogout configuration
+- Bash configuration
+- Tmux configuration
+- Aliases
+
 ## SCREENSHOTS
 
 ![General](Screenshot1.png)
