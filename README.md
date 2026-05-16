@@ -1,6 +1,6 @@
 # CONFIGURATION FILES
 
-## Post-install setup
+## Fedora Manual Post-install setup
 
 - [Post-Install](https://github.com/amirhaouala/Post-Install)
 
