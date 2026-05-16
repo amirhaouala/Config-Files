@@ -1,0 +1,11 @@
+com.github.marktext.marktext
+com.github.tchx84.Flatseal
+com.mattjakeman.ExtensionManager
+com.rustdesk.RustDesk
+dev.qwery.AddWater
+io.beekeeperstudio.Studio
+io.github.flattool.Warehouse
+io.missioncenter.MissionCenter
+org.garudalinux.firedragon
+org.gnome.meld
+org.mozilla.firefox
