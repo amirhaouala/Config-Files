@@ -1,5 +1,9 @@
 # CONFIGURATION FILES
 
+## Post-install setup
+
+- [Post-Install](https://github.com/amirhaouala/Post-Install)
+
 ## WHAT'S INCLUDED
 
 - Installed application including flatpak (I'll exclude fedora installed apps)
