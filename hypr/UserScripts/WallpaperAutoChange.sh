@@ -34,7 +34,7 @@ while true; do
 			# Regenerate colors from the exact image path to avoid cache races
 			$HOME/.config/hypr/scripts/WallustSwww.sh "$img"
 			# Refresh UI components that depend on wallust output
-			$wallust_refresh
+			# $wallust_refresh
 			$HOME/.config/hypr/UserScripts/RainbowBorders.sh
 			sleep $INTERVAL
 
