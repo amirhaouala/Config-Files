@@ -136,9 +136,30 @@
 (use-package elfeed
   :ensure t
   :config
+  (setq elfeed-search-feed-face ":weight bold")
   (setq elfeed-feeds
-        '("https://news.ycombinator.com/rss"
+    '("https://news.ycombinator.com/rss"
 	  "https://inv.nadeko.net/feed/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"))
   (setq elfeed-db-directory "~/.elfeed")
   (global-set-key (kbd "C-x w") 'elfeed))
+
+(use-package elfeed-goodies
+  :ensure t
+  :after elfeed
+  :config
+  (elfeed-goodies/setup)
+  (setq elfeed-goodies/entry-pane-size 0.5))
+#+end_src
+
+* COMPLETION
+#+begin_src emacs-lisp
+(use-package ivy
+  :ensure t
+  :config
+  (ivy-mode 1))
+
+(use-package counsel
+  :ensure t
+  :config
+  (counsel-mode 1))
 #+end_src
