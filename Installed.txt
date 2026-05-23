@@ -67,3 +67,5 @@ webapp-manager
 wlogout
 xdotool
 xwininfo
+zathura
+zathura-pdf-poppler
