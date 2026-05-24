@@ -137,6 +137,7 @@
   :ensure t
   :config
   (setq elfeed-search-feed-face ":weight bold")
+  (setq elfeed-search-filter "@6-months-ago")
   (setq elfeed-feeds
     '("https://news.ycombinator.com/rss"
 	  "https://inv.nadeko.net/feed/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"))
