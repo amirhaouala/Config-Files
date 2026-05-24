@@ -17,7 +17,7 @@
 - Lazydocker configuration
 - Rofi configuration
 - Swaync configuration
-- VSCodium configuration
+- VSCode configuration
 - Waybar configuration
 - Wlogout configuration
 - Bash configuration
@@ -32,18 +32,18 @@
 ![Ags](Screenshot4.png)
 ![Settings](Screenshot5.png)
 
-## WAYBAR PRAYER SCRIPT TO BUILD
+## VSCODE SETUP
 
-- [PRAYERBAR](https://github.com/Onizuka893/prayerbar)
-
-## WEB APPS
-
-![Web Apps](Screenshot6.png)
+[VSCodium](VSCodium)
 
 ## INSTALLED APPS ON FEDORA
 
 [Installed](Installed.txt)
-[Flatpak](flatpak.txt)
+[Flatpak](Flatpaks.txt)
+
+## WAYBAR PRAYER SCRIPT TO BUILD
+
+- [PRAYERBAR](https://github.com/Onizuka893/prayerbar)
 
 ## DNF COPR LIST
 
@@ -51,16 +51,16 @@
 - copr.fedorainfracloud.org/kylegospo/webapp-manager
 - copr.fedorainfracloud.org/solopasha/hyprlandqemu
 
-## VSCODIUM SETUP
-
-[VSCodium](VSCodium)
-
 ## OTHER OSES
 
 - Distrobox: Arch
 - Podman: Parrot, Kali
 - Boxes(libvirt): Nixos
 - Dual Boot For Gaming ONLY: Win
+
+## WEB APPS
+
+![Web Apps](Screenshot6.png)
 
 ## Waydroid Apps
 
