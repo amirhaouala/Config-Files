@@ -139,8 +139,14 @@
   (setq elfeed-search-feed-face ":weight bold")
   (setq elfeed-search-filter "@6-months-ago")
   (setq elfeed-feeds
-    '("https://news.ycombinator.com/rss"
-	  "https://inv.nadeko.net/feed/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"))
+    '(
+      ;; Hacker News
+      "https://news.ycombinator.com/rss"
+      ;; Mental Outlaw
+      "https://inv.nadeko.net/feed/channel/UC7YOGHUfC1Tb6E4pudI9STA"
+      ;; Linus Tech Tips
+	    "https://inv.nadeko.net/feed/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"
+    ))
   (setq elfeed-db-directory "~/.elfeed")
   (global-set-key (kbd "C-x w") 'elfeed))
 
@@ -158,9 +164,4 @@
   :ensure t
   :config
   (ivy-mode 1))
-
-(use-package counsel
-  :ensure t
-  :config
-  (counsel-mode 1))
 #+end_src
