@@ -65,3 +65,7 @@
 ## Waydroid Apps
 
 ![Waydroid](Waydroid.png)
+
+## Windows Apps on Linux
+
+Install Faugus
