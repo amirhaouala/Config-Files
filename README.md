@@ -68,4 +68,8 @@
 
 ## Windows Apps on Linux
 
-Install Faugus
+- [Faugus Launcher](https://github.com/Faugus/faugus-launcher)
+
+## Further Tinkering recommendations
+
+- [Kimi](https://github.com/MoonshotAI/kimi-cli)
