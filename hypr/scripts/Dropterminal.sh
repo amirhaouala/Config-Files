@@ -13,7 +13,7 @@ SPECIAL_WS="special:scratchpad"
 ADDR_FILE="/tmp/dropdown_terminal_addr"
 
 # Dropdown size and position configuration (percentages)
-WIDTH_PERCENT=62  # Width as percentage of screen width
+WIDTH_PERCENT=67 # Width as percentage of screen width
 HEIGHT_PERCENT=61 # Height as percentage of screen height
 Y_PERCENT=10      # Y position as percentage from top (X is auto-centered)
 
